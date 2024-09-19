@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Analysis Club</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            background-color: transparent;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid white; 
+        }
+
+        #hero {
+            height: 100vh;
+            background: url('background2.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 30vh;
+            font-family: 'Futura', serif;
+            font-size: 40px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .apply-btn {
+            background-color: #004ea1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #what-we-do {
+            padding: 100px 10px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .division-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .division {
+            width: 30%;
+        }
+
+        .division img {
+            width: 100%;
+            height: auto;
+        }
+
+        .division-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .division-description {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        #recruitment-info {
+            text-align: center;
+            padding: 50px 10px;
+            background-color: #ffffff;
+        }
+
+        #recruitment-info h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #recruitment-info p {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .interest-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: white;
+            color: #004ea1;
+            border: 2px solid #004ea1;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .interest-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case.html">Case Studies</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Join Us</h1>
+        </div>
+    </section>
+
+    <section id="recruitment-info">
+        <h2>Recruitment Information</h2>
+        <p>Fill out the interest form below to be added to our mailing list and receive updates about recruitment and club-related news!</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmlbHYcLpQ8a5rjBoW3ObkWmLQhZndhh0b_jI5s6wxkZNlhw/viewform" class="interest-btn" target="_blank">Interest Form</a>
+    </section>
+
+</body>
+</html>

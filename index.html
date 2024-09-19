@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Analysis Club</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            background-color: transparent; /* Transparent background */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold; /* Make text stand out */
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid white; 
+        }
+
+        #hero {
+            height: 100vh;
+            background: url('background2.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 30vh;
+            font-family: 'Futura', serif;
+            font-size: 40px;
+        }
+
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .apply-btn {
+            background-color: #004ea1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #what-we-do {
+        padding: 100px 10px; /* Reduced padding */
+        text-align: center;
+        background-color: #f4f4f4;
+        }
+
+
+        .section-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .division-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .division {
+            width: 30%;
+        }
+
+        .division img {
+            width: 100%;
+            height: auto;
+        }
+
+        .division-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .division-description {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Links to index.html -->
+                <li><a href="case.html">Case Studies</a></li> <!-- Links to case.html -->
+                <li><a href="project.html">Projects</a></li> <!-- Links to project.html -->
+                <li><a href="join.html">Join Us</a></li> <!-- Links to join.html -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Sports Analytics Club At Stevenson</h1>
+            <p>A student-run club focused on sports analytics.</p>
+            <a href="join.html" class="apply-btn">Apply Now!</a> <!-- Links to join.html -->
+        </div>
+    </section>
+
+    <section id="what-we-do">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">Sports Analytics Group at Stevenson provides high school students a gateway into sports analytics through statistics and data science.</p>
+
+        <div class="division-container">
+            <div class="division">
+                <img src="data-journalism-chart.jpg" alt="Data Journalism">
+                <h3 class="division-title">Data Journalism</h3>
+                <p class="division-description">Focused on analytics of players career and data visualizations.</p>
+            </div>
+            <div class="division">
+                <img src="projects-chart.jpg" alt="Projects">
+                <h3 class="division-title">Projects</h3>
+                <p class="division-description">Larger and question oriented work to answer concerns</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
