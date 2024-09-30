@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Analysis Club</title>
+    <title>Sports Analysis Club - Our Board</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
@@ -43,7 +47,7 @@
         }
 
         nav ul li a:hover {
-            border-bottom: 2px solid white; 
+            border-bottom: 2px solid white;
         }
 
         #hero {
@@ -76,49 +80,6 @@
 
         .apply-btn:hover {
             background-color: #0056b3;
-        }
-
-        #what-we-do {
-            padding: 100px 10px;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            font-size: 1.2em;
-            margin-bottom: 50px;
-        }
-
-        .division-container {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-        }
-
-        .division {
-            width: 30%;
-        }
-
-        .division img {
-            width: 100%;
-            height: auto;
-        }
-
-        .division-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .division-description {
-            margin-top: 10px;
-            font-size: 1em;
         }
 
         #recruitment-info {
@@ -155,6 +116,92 @@
             background-color: #f0f0f0;
         }
 
+        /* Board Members Flip Boxes */
+        #board-section {
+            margin-top: 50px; /* Added more space between the hero section and flip-boxes */
+        }
+
+        .board-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .flip-box {
+            background-color: transparent;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .flip-box-front {
+            background-color: #fff;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flip-box-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-image {
+            width: 250px; /* Fixed width */
+            height: 300px; /* Fixed height */
+            object-fit: cover; /* Ensures the image maintains its aspect ratio */
+            border-radius: 10px; /* Retains the rectangular shape */
+            margin-bottom: 10px;
+        }
+
+        .member-name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .member-title {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .member-bio {
+            font-size: 1em;
+            padding: 0 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -164,14 +211,78 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="case.html">Case Studies</a></li>
                 <li><a href="project.html">Projects</a></li>
-                <li><a href="join.html">Join Us</a></li>
+                <li><a href="join.html">Our Board</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
         <div class="hero-content">
-            <h1>Join Us</h1>
+            <h1>Our Board</h1>
+        </div>
+    </section>
+
+    <section id="board-section">
+        <div class="board-container">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="images/simonzhang.jpg" alt="Simon Zhang" class="member-image">
+                        <div class="member-name">Simon Zhang</div>
+                        <div class="member-title">Co-President</div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="member-bio">
+                            Hello! I'm Simon and I'm also a senior at Stevenson. I'm from Beijing, China. I watch basketball and a little golf in my freetime. My favorite basketball player are Harden and Kyrie. In addition to sports analysis, I also enjoy listening to RnB and scroll through some instagram reels. This year, I'm looking forward to learning more about sports analysis and expand on the application of statistics.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="images/ethanhu.jpg" alt="Ethan Hu" class="member-image">
+                        <div class="member-name">Ethan Hu</div>
+                        <div class="member-title">Co-President</div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="member-bio">
+                            Hello! My name is Ethan, and this is my last year at Stevenson. I'm from Taiwan and San Mateo. I love watching baseball and basketball. My favorite movie is Moneyball, which inspired me to start this club. In addition to sports analysis, I also enjoy playing golf and making music. This year, I'm looking forward to learning more about sports analysis and working on some exciting projects!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="images/mathewwhang.jpg" alt="Mathew Whang" class="member-image">
+                        <div class="member-name">Mathew Whang</div>
+                        <div class="member-title">Co-President</div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="member-bio">
+                            Hello! My name is Matthew, and I am a senior in Stevenson School. I’m from Seoul, South Korea. I am a soccer player and enthusiast, which inspired me to start the club with Ethan and Simon. In addition to the club and soccer, I like to surf and rock climb. This year, I am very intrigued to do more case studies on individual soccer players and tactical analytics
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="images/allenchung.jpg" alt="Allen Chung" class="member-image">
+                        <div class="member-name">Allen Chung</div>
+                        <div class="member-title">Analyst</div>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="member-bio">
+                            Hi guys! My name is Allen Chung and I am a junior at Stevenson. I am from Palo Alto as well as Taipei, Taiwan. I love to play volleyball and enjoy listening to Zach Bryan. Hope to meet y'all soon!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -180,6 +291,5 @@
         <p>Fill out the interest form below to be added to our mailing list and receive updates about recruitment and club-related news!</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmlbHYcLpQ8a5rjBoW3ObkWmLQhZndhh0b_jI5s6wxkZNlhw/viewform" class="interest-btn" target="_blank">Interest Form</a>
     </section>
-
 </body>
 </html>
